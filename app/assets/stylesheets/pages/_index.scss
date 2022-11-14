@@ -14,7 +14,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  // opacity: 0.9;
   background: black;
 }
 
@@ -28,6 +27,14 @@
 
 a:hover {
   text-decoration: none;
-  opacity: 0.8;
+  opacity: 0.9;
   color: white;
+}
+
+#card-movie {
+  background-color: white;
+}
+
+.card-body {
+  text-align: left;
 }
