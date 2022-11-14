@@ -1,8 +1,10 @@
 <h1>Your lists</h1>
-<ul>
-<% @lists.each do |list| %>
-  <li><%= link_to list.name, list_path(list)%></p>
-<% end %>
-</ul>
+<div class = "cards">
+  <% @lists.each do |list| %>
+  <div class="card" style="background-position: center; background-repeat: no-repeat; background-size: cover; background-image: linear-gradient(rgba(0,0,0,0.40), rgba(0,0,0,0.40)), url('<%= cl_image_path list.photo.key %>')">
+      <%= link_to list.name, list_path(list), class: "link"%>
+    </div>
+  <% end %>
+</div>
 
 <p><%= link_to "Create a new list", new_list_path, class: "btn btn-primary mt-3" %></p>
